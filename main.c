@@ -66,13 +66,14 @@ int main(void)
 void timer0(void) interrupt 1
 {
 if(flag == 1)
-		PWM_Value += 10;
-if(flag == 2)
-		PWM_Value -= 10;
-if(PWM_Value >= 2500)
-	PWM_Value = 2500;
-if(PWM_Value <= 500)
-	PWM_Value = 500;
+		PWM_Value = 1000;
+else if(flag == 2)
+		PWM_Value = 2000;
+else PWM_Value = 1500;
+//if(PWM_Value >= 2500)
+//	PWM_Value = 2500;
+//if(PWM_Value <= 500)
+//	PWM_Value = 500;
 
 
 switch(order)

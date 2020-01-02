@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    01/01/2020  14:26:41  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    01/02/2020  12:26:28  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
@@ -31,13 +31,13 @@ LINK MAP OF MODULE:  .\Objects\Practice (MAIN)
                     0003H     0008H                  *** GAP ***
             CODE    000BH     0003H     ABSOLUTE     
                     000EH     07F2H                  *** GAP ***
-            CODE    0800H     00E9H     UNIT         ?PR?TIMER0?MAIN
-            CODE    08E9H     008CH     UNIT         ?C_C51STARTUP
-            CODE    0975H     0039H     UNIT         ?PR?MAIN?MAIN
-            CODE    09AEH     0023H     UNIT         ?PR?_DELAY?MAIN
-            CODE    09D1H     0014H     UNIT         ?C?LIB_CODE
-            CODE    09E5H     0012H     UNIT         ?PR?INIT_TIMER0?MAIN
-            CODE    09F7H     0004H     UNIT         ?C_INITSEG
+            CODE    0800H     00C6H     UNIT         ?PR?TIMER0?MAIN
+            CODE    08C6H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0952H     0039H     UNIT         ?PR?MAIN?MAIN
+            CODE    098BH     0023H     UNIT         ?PR?_DELAY?MAIN
+            CODE    09AEH     0014H     UNIT         ?C?LIB_CODE
+            CODE    09C2H     0012H     UNIT         ?PR?INIT_TIMER0?MAIN
+            CODE    09D4H     0004H     UNIT         ?C_INITSEG
 
 
 
@@ -59,7 +59,7 @@ SEGMENT
 
 SYMBOL TABLE OF MODULE:  .\Objects\Practice (MAIN)
 
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/01/2020  14:26:41  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/02/2020  12:26:28  PAGE 2
 
 
   VALUE           TYPE          NAME
@@ -75,8 +75,8 @@ SYMBOL TABLE OF MODULE:  .\Objects\Practice (MAIN)
   D:00B8H         PUBLIC        IP
   D:0008H         PUBLIC        flag
   D:0009H         PUBLIC        order
-  C:0975H         PUBLIC        main
-  C:09E5H         PUBLIC        Init_Timer0
+  C:0952H         PUBLIC        main
+  C:09C2H         PUBLIC        Init_Timer0
   D:0098H         PUBLIC        SCON
   D:0089H         PUBLIC        TMOD
   D:0088H         PUBLIC        TCON
@@ -89,7 +89,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\Practice (MAIN)
   D:000AH         PUBLIC        PWM_Value
   B:0088H.4       PUBLIC        TR0
   D:00C8H         PUBLIC        T2CON
-  C:09AEH         PUBLIC        _Delay
+  C:098BH         PUBLIC        _Delay
   D:00D0H         PUBLIC        PSW
   B:00B0H.1       PUBLIC        key1
   B:00B0H.0       PUBLIC        key2
@@ -98,98 +98,95 @@ SYMBOL TABLE OF MODULE:  .\Objects\Practice (MAIN)
   -------         DO            
   D:0004H         SYMBOL        i
   -------         ENDDO         
-  C:09AEH         LINE#         20
-  C:09AEH         LINE#         21
-  C:09AEH         LINE#         23
-  C:09BFH         LINE#         24
-  C:09D0H         LINE#         25
+  C:098BH         LINE#         20
+  C:098BH         LINE#         21
+  C:098BH         LINE#         23
+  C:099CH         LINE#         24
+  C:09ADH         LINE#         25
   -------         ENDPROC       _DELAY
   -------         PROC          INIT_TIMER0
-  C:09E5H         LINE#         28
-  C:09E5H         LINE#         29
-  C:09E5H         LINE#         30
-  C:09E8H         LINE#         31
-  C:09EBH         LINE#         32
-  C:09EEH         LINE#         33
-  C:09F0H         LINE#         34
-  C:09F2H         LINE#         35
-  C:09F4H         LINE#         36
-  C:09F6H         LINE#         37
+  C:09C2H         LINE#         28
+  C:09C2H         LINE#         29
+  C:09C2H         LINE#         30
+  C:09C5H         LINE#         31
+  C:09C8H         LINE#         32
+  C:09CBH         LINE#         33
+  C:09CDH         LINE#         34
+  C:09CFH         LINE#         35
+  C:09D1H         LINE#         36
+  C:09D3H         LINE#         37
   -------         ENDPROC       INIT_TIMER0
   -------         PROC          MAIN
-  C:0975H         LINE#         40
-  C:0975H         LINE#         41
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/01/2020  14:26:41  PAGE 3
+  C:0952H         LINE#         40
+  C:0952H         LINE#         41
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/02/2020  12:26:28  PAGE 3
 
 
-  C:0975H         LINE#         42
-  C:097BH         LINE#         43
-  C:097EH         LINE#         45
-  C:097EH         LINE#         46
-  C:097EH         LINE#         47
-  C:0994H         LINE#         48
-  C:0994H         LINE#         49
-  C:0997H         LINE#         50
-  C:0997H         LINE#         51
-  C:099AH         LINE#         52
-  C:099AH         LINE#         53
-  C:099DH         LINE#         54
-  C:099DH         LINE#         55
-  C:09A0H         LINE#         56
-  C:09A0H         LINE#         57
-  C:09A2H         LINE#         59
-  C:09A2H         LINE#         60
-  C:09A5H         LINE#         61
-  C:09A5H         LINE#         62
-  C:09ACH         LINE#         63
+  C:0952H         LINE#         42
+  C:0958H         LINE#         43
+  C:095BH         LINE#         45
+  C:095BH         LINE#         46
+  C:095BH         LINE#         47
+  C:0971H         LINE#         48
+  C:0971H         LINE#         49
+  C:0974H         LINE#         50
+  C:0974H         LINE#         51
+  C:0977H         LINE#         52
+  C:0977H         LINE#         53
+  C:097AH         LINE#         54
+  C:097AH         LINE#         55
+  C:097DH         LINE#         56
+  C:097DH         LINE#         57
+  C:097FH         LINE#         59
+  C:097FH         LINE#         60
+  C:0982H         LINE#         61
+  C:0982H         LINE#         62
+  C:0989H         LINE#         63
   -------         ENDPROC       MAIN
   -------         PROC          TIMER0
   C:0800H         LINE#         66
   C:0815H         LINE#         68
   C:081EH         LINE#         69
-  C:0829H         LINE#         70
-  C:082FH         LINE#         71
-  C:083BH         LINE#         72
-  C:0846H         LINE#         73
-  C:084CH         LINE#         74
-  C:0857H         LINE#         75
-  C:085DH         LINE#         78
-  C:086DH         LINE#         79
-  C:086DH         LINE#         81
-  C:086FH         LINE#         83
-  C:088EH         LINE#         85
-  C:0890H         LINE#         87
-  C:0892H         LINE#         89
-  C:0894H         LINE#         91
-  C:08B6H         LINE#         93
-  C:08BFH         LINE#         95
-  C:08C1H         LINE#         100
-  C:08C1H         LINE#         102
-  C:08C4H         LINE#         104
-  C:08C7H         LINE#         106
-  C:08C9H         LINE#         108
-  C:08C9H         LINE#         110
-  C:08CCH         LINE#         112
-  C:08CFH         LINE#         114
-  C:08CFH         LINE#         116
-  C:08D1H         LINE#         118
-  C:08D4H         LINE#         120
-  C:08D4H         LINE#         122
-  C:08D4H         LINE#         124
-  C:08D6H         LINE#         125
+  C:0826H         LINE#         70
+  C:082CH         LINE#         71
+  C:0834H         LINE#         72
+  C:083AH         LINE#         79
+  C:084AH         LINE#         80
+  C:084AH         LINE#         81
+  C:084CH         LINE#         82
+  C:086BH         LINE#         83
+  C:086DH         LINE#         84
+  C:086FH         LINE#         85
+  C:0871H         LINE#         86
+  C:0893H         LINE#         87
+  C:089CH         LINE#         88
+  C:089EH         LINE#         89
+  C:089EH         LINE#         90
+  C:08A1H         LINE#         91
+  C:08A4H         LINE#         92
+  C:08A6H         LINE#         93
+  C:08A6H         LINE#         94
+  C:08A9H         LINE#         95
+  C:08ACH         LINE#         96
+  C:08ACH         LINE#         97
+  C:08AEH         LINE#         98
+  C:08B1H         LINE#         99
+  C:08B1H         LINE#         100
+  C:08B1H         LINE#         101
+  C:08B3H         LINE#         102
   -------         ENDPROC       TIMER0
   -------         ENDMOD        MAIN
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/01/2020  14:26:41  PAGE 4
-
-
 
   -------         MODULE        ?C?SLSHR
-  C:09D1H         PUBLIC        ?C?SLSHR
+  C:09AEH         PUBLIC        ?C?SLSHR
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/02/2020  12:26:28  PAGE 4
+
+
   -------         ENDMOD        ?C?SLSHR
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 015DH BYTE (17%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 013AH BYTE (15%) *
 ******************************************************************************
 
-Program Size: data=13.0 xdata=0 code=513
+Program Size: data=13.0 xdata=0 code=478
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
