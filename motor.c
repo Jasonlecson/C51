@@ -43,18 +43,12 @@ void motor()
 		if((key1==0)|key2==0)
 		{
 			if(key1==0)
-			{
 				flag = 1;
-			}
-			if(key2==0)
-			{
+			else
 				flag = 2;
-			}
 		}
 		else
-		{
 				flag=0;
-		}
 		Delay(20);
 	}
 }
