@@ -62,10 +62,10 @@ if(flag == 1)
 		PWM_Value += 1;
 else if(flag == 2)
 		PWM_Value -= 1;
-if(PWM_Value >= 2500)
-	PWM_Value = 2500;
-if(PWM_Value <= 500)
-	PWM_Value = 500;
+if(PWM_Value >= 2300)
+	PWM_Value = 2300;
+if(PWM_Value <= 300)
+	PWM_Value = 300;
 
 
 switch(order)
