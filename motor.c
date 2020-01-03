@@ -14,6 +14,8 @@ uint PWM_Value;
 uchar order=0;
 uchar flag;
 
+void smg(uint a);
+
 void Delay(unsigned int s)
 {
 unsigned int i;
@@ -50,6 +52,7 @@ void motor()
 		else
 				flag=0;
 		Delay(20);
+		smg(PWM_Value);
 	}
 }
 
