@@ -1,4 +1,4 @@
-C51 COMPILER V9.60.0.0   MOTOR                                                             01/03/2020 14:05:49 PAGE 1   
+C51 COMPILER V9.60.0.0   MOTOR                                                             01/03/2020 14:53:34 PAGE 1   
 
 
 C51 COMPILER V9.60.0.0, COMPILATION OF MODULE MOTOR
@@ -48,72 +48,86 @@ line level    source
   38          {
   39   1        void Delay(unsigned int s);
   40   1        void Init_Timer0();
-  41   1        PWM_Value = 1500;
+  41   1        PWM_Value = 1350;
   42   1        Init_Timer0();
   43   1        while(1)
   44   1        {
-  45   2          if((key1==0)|key2==0)
+  45   2          if((key1==0)|key2==0|key3==0)
   46   2          {
   47   3            if(key1==0)
   48   3              flag = 1;
-  49   3            else
+  49   3            else if(key2==0)
   50   3              flag = 2;
-  51   3          }
-  52   2          else
-  53   2              flag=0;
-  54   2          Delay(20);
-C51 COMPILER V9.60.0.0   MOTOR                                                             01/03/2020 14:05:49 PAGE 2   
+  51   3            else
+  52   3              flag = 3;
+  53   3          }
+  54   2          else if(key4==0)
+C51 COMPILER V9.60.0.0   MOTOR                                                             01/03/2020 14:53:34 PAGE 2   
 
-  55   2          smg(PWM_Value);
-  56   2        }
-  57   1      }
-  58          
-  59          void timer0(void) interrupt 1
-  60          {
-  61   1      if(flag == 1)
-  62   1          PWM_Value += 1;
-  63   1      else if(flag == 2)
-  64   1          PWM_Value -= 1;
-  65   1      if(PWM_Value >= 2300)
-  66   1        PWM_Value = 2300;
-  67   1      if(PWM_Value <= 300)
-  68   1        PWM_Value = 300;
-  69   1      
-  70   1      
-  71   1      switch(order)
+  55   2              flag = 4;
+  56   2          else
+  57   2              flag=0;
+  58   2          Delay(20);
+  59   2          smg(PWM_Value);
+  60   2        }
+  61   1      }
+  62          
+  63          void timer0(void) interrupt 1
+  64          {
+  65   1      if(flag == 1)
+  66   1          PWM_Value += 1;
+  67   1      else if(flag == 2)
+  68   1          PWM_Value -= 1;
+  69   1      else if(flag == 3)
+  70   1          PWM_Value = 1350;
+  71   1      else if(flag == 4)
   72   1      {
-  73   2        case 1:PWM_OUT=1;
-  74   2             TH0=(65536-PWM_Value)>>8; 
-  75   2             TL0=(uchar)(65536-PWM_Value);
-  76   2             break;                          
-  77   2        case 2:PWM_OUT=0;
-  78   2             TH0=(65536-(5000-PWM_Value))>>8;    
-  79   2             TL0=(uchar)(65536-(5000-PWM_Value));
-  80   2             break;                          
-  81   2        case 3:
-  82   2             TH0=60536>>8;   
-  83   2             TL0=(uchar)60536;
-  84   2             break;
-  85   2        case 4:
-  86   2             TH0=60536>>8;   
-  87   2             TL0=(uchar)60536;
-  88   2             order=0;
-  89   2             break;
-  90   2      default: order=0; 
-  91   2             break;
-  92   2      } 
-  93   1             order++;
-  94   1      }
+  73   2        PWM_Value += 2;
+  74   2        if(PWM_Value >= 2300)
+  75   2        PWM_Value = 310;
+  76   2      }
+  77   1      if(PWM_Value >= 2300)
+  78   1        PWM_Value = 2300;
+  79   1      if(PWM_Value <= 300)
+  80   1        PWM_Value = 300;
+  81   1      
+  82   1      
+  83   1      switch(order)
+  84   1      {
+  85   2        case 1:PWM_OUT=1;
+  86   2             TH0=(65536-PWM_Value)>>8; 
+  87   2             TL0=(uchar)(65536-PWM_Value);
+  88   2             break;                          
+  89   2        case 2:PWM_OUT=0;
+  90   2             TH0=(65536-(5000-PWM_Value))>>8;    
+  91   2             TL0=(uchar)(65536-(5000-PWM_Value));
+  92   2             break;                          
+  93   2        case 3:
+  94   2             TH0=60536>>8;   
+  95   2             TL0=(uchar)60536;
+  96   2             break;
+  97   2        case 4:
+  98   2             TH0=60536>>8;   
+  99   2             TL0=(uchar)60536;
+ 100   2             order=0;
+ 101   2             break;
+ 102   2      default: order=0; 
+ 103   2             break;
+ 104   2      } 
+ 105   1             order++;
+ 106   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    344    ----
+   CODE SIZE        =    422    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
    DATA SIZE        =      4    ----
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
+C51 COMPILER V9.60.0.0   MOTOR                                                             01/03/2020 14:53:34 PAGE 3   
+
 END OF MODULE INFORMATION.
 
 

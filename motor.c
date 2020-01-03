@@ -38,17 +38,21 @@ void motor()
 {
 	void Delay(unsigned int s);
 	void Init_Timer0();
-	PWM_Value = 1500;
+	PWM_Value = 1350;
 	Init_Timer0();
 	while(1)
 	{
-		if((key1==0)|key2==0)
+		if((key1==0)|key2==0|key3==0)
 		{
 			if(key1==0)
 				flag = 1;
-			else
+			else if(key2==0)
 				flag = 2;
+			else
+				flag = 3;
 		}
+		else if(key4==0)
+				flag = 4;
 		else
 				flag=0;
 		Delay(20);
@@ -62,6 +66,14 @@ if(flag == 1)
 		PWM_Value += 1;
 else if(flag == 2)
 		PWM_Value -= 1;
+else if(flag == 3)
+		PWM_Value = 1350;
+else if(flag == 4)
+{
+	PWM_Value += 2;
+	if(PWM_Value >= 2300)
+	PWM_Value = 310;
+}
 if(PWM_Value >= 2300)
 	PWM_Value = 2300;
 if(PWM_Value <= 300)

@@ -3615,9 +3615,9 @@
       </Doc>
       <Doc>
         <Name>.\motor.c</Name>
-        <ColumnNumber>15</ColumnNumber>
+        <ColumnNumber>17</ColumnNumber>
         <TopLine>40</TopLine>
-        <CurrentLine>68</CurrentLine>
+        <CurrentLine>75</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
